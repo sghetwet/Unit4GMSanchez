@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed;
     private Rigidbody enemyRb;
     private GameObject player;
     // Start is called before the first frame update
@@ -17,6 +17,8 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyRb.AddForce((player.transform.position - transform.position) * speed);
+        Vector3 lookDirection = (player.transform.position - transform.position).normalized;
+
+        enemyRb.AddForce(lookDirection * speed);
     }
 }
