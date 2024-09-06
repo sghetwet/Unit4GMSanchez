@@ -26,8 +26,9 @@ public class RocketBehaviour : MonoBehaviour
             transform.LookAt(target);
         }
     }
-    public void Fire(Transform newTarget)
+    public void Fire(Transform HomingTarget)
     {
+        target = HomingTarget;
         homing = true;
         Destroy(gameObject, aliveTimer);
     }

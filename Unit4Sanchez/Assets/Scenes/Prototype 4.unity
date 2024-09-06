@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -448,6 +448,12 @@ MonoBehaviour:
   speed: 0.5
   hasPowerUp: 0
   PowerUpIndicator: {fileID: 677622544}
+  currentPowerUp: 0
+  rocketPrefab: {fileID: 426166571119131997, guid: f253a8a81e6915d48a377fcff79319a1, type: 3}
+  hangTime: 0.2
+  smashSpeed: 100
+  explosionForce: 1000
+  explosionRadius: 10
 --- !u!1 &677622544 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
@@ -666,7 +672,10 @@ MonoBehaviour:
   - {fileID: 1566837851612809046, guid: 0499a18529dfc2e44a28acc7e16ad1a4, type: 3}
   enemyCount: 0
   waveNumber: 1
-  powerupPrefab: {fileID: 1564843410074373318, guid: c5a33af3339468547b33f40c8809bf3b, type: 3}
+  powerupPrefabs:
+  - {fileID: 1564843410074373318, guid: c5a33af3339468547b33f40c8809bf3b, type: 3}
+  - {fileID: 1564843410074373318, guid: 2fdf855f22dc77149b1cea0b5b257107, type: 3}
+  - {fileID: 1564843410074373318, guid: 8e74302a0f554d84d990fccdfb24ea39, type: 3}
 --- !u!4 &1236229774
 Transform:
   m_ObjectHideFlags: 0
@@ -680,7 +689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1403545340
 PrefabInstance:
