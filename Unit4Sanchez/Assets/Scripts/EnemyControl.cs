@@ -27,4 +27,4 @@ public class EnemyControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
-}
+} 
